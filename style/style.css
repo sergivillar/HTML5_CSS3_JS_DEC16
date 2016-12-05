@@ -21,16 +21,17 @@ body {
 	font-size: 16px;
 }
 
-.navbar > .navbar-list > .navbar-item.active {
-	color: #F7F7F7;
-	background-color: #A4A4A4;
-}
 
 .navbar > .navbar-list > .navbar-item > .navbar-link {
 	display: inline-block;
 	text-decoration: none;
 	padding: 20px;
 	color: rgba(0, 0, 0, 0.92);
+}
+
+.navbar > .navbar-list > .navbar-item.active > .navbar-link {
+	color: #F7F7F7;
+	background-color: #A4A4A4;
 }
 
 .navbar > .navbar-list > .navbar-item > .navbar-link:hover {
