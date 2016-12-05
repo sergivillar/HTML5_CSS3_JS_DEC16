@@ -47,8 +47,8 @@ body {
 
 .header > .title {
 	position: absolute;
-	left: 0;
 	top: 65%;
+	width: 100%;
 	color: white;
 	font-family: batman;
 	text-align: center;
@@ -65,8 +65,14 @@ body {
 	background-position: center center;
 }
 
-.header > .title-cite {
-
+.header > .title-cite {	
+	position: absolute;
+	top: 60%;
+	color: white;
+	width: 100%;
+	text-align: center;
+	font-family: batman;
+	font-size: 28px;
 }
 
 .clearfix:after {
@@ -76,3 +82,6 @@ body {
 	height: 0;
 	clear: both;
 }
+
+
+
