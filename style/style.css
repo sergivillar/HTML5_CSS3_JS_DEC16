@@ -75,6 +75,16 @@ body {
 	font-size: 28px;
 }
 
+.about-me > .batman-video {
+	max-width: 50%;
+	float: left;
+}
+
+.about-me > .batman-info {
+	max-width: 50%;
+	float: right;
+}
+
 .clearfix:after {
 	content: " "; /* Older browser do not support empty content */
 	visibility: hidden;
@@ -82,6 +92,7 @@ body {
 	height: 0;
 	clear: both;
 }
+
 
 
 
