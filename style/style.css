@@ -1,5 +1,11 @@
 body {
 	margin: 0px;
+	font-family: 'Roboto', sans-serif;
+}
+
+@font-face {
+	font-family: batman;
+	src: url(../fonts/batmfo__.ttf);
 }
 
 .navbar {
@@ -37,6 +43,30 @@ body {
 .navbar > .navbar-list > .navbar-item > .navbar-link:hover {
 	color: #F7F7F7;
 	background-color: #A4A4A4;
+}
+
+.header > .title {
+	position: absolute;
+	left: 0;
+	top: 65%;
+	color: white;
+	font-family: batman;
+	text-align: center;
+	font-size: 100px;
+
+}
+
+.header > .title-img {
+	width: 100%;
+	background-image: url("../images/batman.jpg");
+	height: 100vh;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.header > .title-cite {
+
 }
 
 .clearfix:after {
