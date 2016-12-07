@@ -85,6 +85,12 @@ body {
 	float: right;
 }
 
+.team-member-photo img {
+	height: 300px;
+	max-width: 100%;
+	border-radius: 50%;
+}
+
 .clearfix:after {
 	content: " "; /* Older browser do not support empty content */
 	visibility: hidden;
