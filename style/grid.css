@@ -1,0 +1,85 @@
+.container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+/* cleafix hack */ 
+.row:before,
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.col-1 {
+	width: 8.33333333%;
+	float: left;
+	display: inline-block;
+}
+
+.col-2 {
+	width: 16.66666667%;
+	float: left;
+	display: inline-block;
+}
+
+.col-3 {
+	width: 25%;
+	float: left;
+	display: inline-block;
+}
+
+.col-4 {
+	width: 33.33333333%;
+	float: left;
+	display: inline-block;
+}
+
+.col-5 {
+	width: 41.66666667%;
+	float: left;
+	display: inline-block;
+}
+
+.col-6 {
+	width: 50%;
+	float: left;
+	display: inline-block;
+}
+
+.col-7 {
+	width: 58.33333333%;
+	float: left;
+	display: inline-block;
+}
+
+.col-8 {
+	width: 66.66666667%;
+	float: left;
+	display: inline-block;
+}
+
+.col-9 {
+	width: 75%;
+	float: left;
+	display: inline-block;
+}
+
+.col-10 {
+	width: 83.33333333%;
+	float: left;
+	display: inline-block;
+}
+
+.col-11 {
+	width: 91.66666667%;
+	float: left;
+	display: inline-block;
+}
+
+.col-12 {
+	width: 100%;
+	float: left;
+	display: inline-block;
+}
