@@ -112,7 +112,7 @@ body {
 	flex-flow: row wrap;
 }
 
-.trasnport-item {
+.transport-item {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -124,6 +124,17 @@ body {
 	max-width: 100%;
 	height: 250px;
 	border-radius: 50%;
+}
+
+.footer {
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.92);
+	height: 50px;
+	color: #F7F7F7;
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: center;
 }
 
 .clearfix:after {
