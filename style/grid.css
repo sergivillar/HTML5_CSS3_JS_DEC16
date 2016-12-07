@@ -13,7 +13,7 @@
 }
 
 .col-1 {
-	width: 8.33333333%;
+	width: calc(100% / 12);
 	float: left;
 	display: inline-block;
 }
@@ -31,7 +31,7 @@
 }
 
 .col-4 {
-	width: 33.33333333%;
+	width: calc(calc(100% / 12) * 4);
 	float: left;
 	display: inline-block;
 }
