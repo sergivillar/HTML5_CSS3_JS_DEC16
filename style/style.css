@@ -107,6 +107,25 @@ body {
 	margin-right: calc(-50vw + 50%);
 }
 
+.row-flex {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.trasnport-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	flex: 1;
+}
+
+.transport-img {
+	max-width: 100%;
+	height: 250px;
+	border-radius: 50%;
+}
+
 .clearfix:after {
 	content: " "; /* Older browser do not support empty content */
 	visibility: hidden;
