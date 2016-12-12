@@ -71,7 +71,7 @@ body {
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	background-position: center center;
-	transition: background-size 1s;
+	transition: all 0.5s;
 }
 
 .header > .title-img:hover {
