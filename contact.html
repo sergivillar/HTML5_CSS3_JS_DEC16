@@ -4,9 +4,29 @@
 <head>
 	<title>Batman</title>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="style/style.css">
 	<link rel="stylesheet" type="text/css" href="style/grid.css">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+	<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyA-jpiiZm0kg4wbYwPvUtNZvyLbiNcz6p8"></script>
+	<script>
+		function initialize() {
+			var myLatLng = {lat: 42.762480, lng: -83.283406};
+
+			var mapProp = {
+				center:myLatLng,
+				zoom:15,
+				mapTypeId:google.maps.MapTypeId.ROADMAP
+			};
+			var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+
+			var marker = new google.maps.Marker({
+				position: myLatLng,
+				map: map,
+				title: 'Aqui estamos'
+			});
+		}
+		google.maps.event.addDomListener(window, 'load', initialize);
+	</script>
 </head>
 
 <body>
@@ -37,7 +57,7 @@
 		<section class="section-content row">
 			<h2>Contacta con Batman</h2>
 			<div class="col-6">
-				MAPA
+				<div id="googleMap"></div>
 			</div>
 
 			<div class="col-6">
@@ -103,4 +123,6 @@
 	</footer>
 </body>
 <script src="js/form.js"></script>
+<script src="js/geolocation.js"></script>
+
 </html>

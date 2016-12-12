@@ -2,9 +2,14 @@
 	box-sizing: border-box;
 }
 
+html {
+	height: 100%;
+}
+
 body {
 	margin: 0px;
 	font-family: 'Roboto', sans-serif;
+	height: 100%;
 }
 
 @font-face {
@@ -230,6 +235,15 @@ input[type=button], input[type=submit], input[type=reset], button {
 
 #too-many-enemies {
 	display: none;
+}
+
+#googleMap {
+	height: 400px;
+}
+
+.container {
+	min-height: 100%;
+	margin-bottom: -50px;
 }
 
 .clearfix:after {
