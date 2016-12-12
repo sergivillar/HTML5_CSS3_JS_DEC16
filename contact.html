@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Batman</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/grid.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+</head>
+
+<body>
+	<nav class="navbar">
+		<ul class="navbar-list">
+			<li class="navbar-item">
+				<a href="index.html" class="navbar-link">Inicio</a>
+			</li>
+			<li class="navbar-item">
+				<a href="index.html#quien-soy" class="navbar-link">Quien soy</a>
+			</li>
+			<li class="navbar-item">
+				<a href="index.html#equipo" class="navbar-link">Equipo</a>
+			</li>
+			<li class="navbar-item">
+				<a href="index.html#transporte" class="navbar-link">Transporte</a>
+			</li>
+			<li class="navbar-item active">
+				<a href="contact.html" class="navbar-link">Contacto</a>
+			</li>
+			<li class="navbar-item">
+				<a href="tasks.html" class="navbar-link">Tareas</a>
+			</li>
+		</ul>
+	</nav>
+
+	<main class="container">
+		<section class="section-content row">
+			<h2>Contacta con Batman</h2>
+			<div class="col-6">
+				MAPA
+			</div>
+
+			<div class="col-6">
+				<form id="form-contact" class="form" name="contact-batman" method="get" novalidate>
+					<div class="form-row">
+						<label for="nombre">Nombre:</label>
+						<input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+					</div>
+
+					<div class="form-row">
+						<span>¿Tienes apellidos?</span>
+						<label for="apellidos_si">Si</label>
+						<input type="radio" id="apellidos_si" name="tienes_apellidos" value="yes" required>
+						<label for="apellidos_no">No</label>
+						<input type="radio" id="apellidos_no" name="tienes_apellidos" value="no" required>
+					</div>
+
+					<div class="form-row">
+						<label for="emial">Email:</label>
+						<input type="email" id="email" name="email" placeholder="name@company.com" 
+						pattern="[A-Za-Z0-9\.\+]+@[A-Za-Z0-9]+\.[A-Za-Z0-9\.]+" required>
+					</div>
+
+					<div class="form-row">
+						<label for="tipo_mision_1">Consulta:</label>
+						<input type="radio" id="tipo_mision_1" name="tipo_mision" value="Consulta" required>
+						<label for="tipo_mision_2">Misión simple</label>
+						<input type="radio" id="tipo_mision_2" name="tipo_mision" value="Misión simple" required>
+						<label for="tipo_mision_3">Rescate</label>
+						<input type="radio" id="tipo_mision_3" name="tipo_mision" value="Rescate" required>
+						<label for="tipo_mision_4">Salvar Gotham</label>
+						<input type="radio" id="tipo_mision_4" name="tipo_mision" value="Salvar Gotham" required>
+					</div>
+
+					<div class="form-row">
+						<label for="ejercito">Tamaño del ejercito</label>
+						<input type="number" id="ejercito" name="ejercito" min="20" required>
+					</div>
+
+					<div class="form-row" id="too-many-enemies">
+						<span>Son demasiados enemigos. ¿Estas seguro?</span>
+						<label for="seguro_si">Si</label>
+						<input type="radio" id="seguro_si" name="estas_seguro" value="yes" required>
+						<label for="seguro_no">No</label>
+						<input type="radio" id="seguro_no" name="estas_seguro" value="no" required>
+					</div>
+
+					<div class="form-row">
+						<label for="fecha">Fecha de la mision:</label>
+						<input type="date" id="fecha" name="fecha" required>
+					</div>
+
+					<div class="form-row">
+						<button type="submit" id="enviar">Enviar</button>
+					</div>
+				</form>
+			</div>
+		</section>
+	</main>
+
+	<footer class="footer">
+		Sergio Fernández &copy; 2016 KeepCoding.io
+	</footer>
+</body>
+<script src="js/form.js"></script>
+</html>

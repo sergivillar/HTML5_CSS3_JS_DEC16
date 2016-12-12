@@ -203,6 +203,35 @@ body {
 
 }
 
+.form {
+	padding: 0 20px;
+}
+
+.form .form-row {
+	padding: 10px;
+}
+
+input {
+	padding: 4px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+input[type=button], input[type=submit], input[type=reset], button {
+	background-color: #4CAF50;
+	border: none;
+	color: white;
+	padding: 15px 40px;
+	text-decoration: none;
+	margin: 4px 2px;
+	cursor: pointer;
+	border-radius: 0px;
+}
+
+#too-many-enemies {
+	display: none;
+}
+
 .clearfix:after {
 	content: " "; /* Older browser do not support empty content */
 	visibility: hidden;
