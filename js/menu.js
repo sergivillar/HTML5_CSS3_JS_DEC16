@@ -61,16 +61,42 @@ var offsetTransporte = cumulativeOffset(document.getElementById('transporte')) -
 window.addEventListener('scroll', changeMenuStyle);
 
 function changeMenuStyle(event) {
+	var previous;
+
 	if (window.pageYOffset >= 0 && window.pageYOffset < offsetQuienSoy) {
+		if(!previous) {
+			previous = 1;
+		} else if(previous == 1) {
+			return false;
+		}
+
 		deleteActiveClass();
 		document.querySelector('a[href="#"]').parentNode.classList.add("active");
 	} else if(window.pageYOffset >= offsetQuienSoy && window.pageYOffset < offsetEquipo) {
+		if(!previous) {
+			previous = 2;
+		} else if(previous == 2) {
+			return false;
+		}
+
 		deleteActiveClass();
 		document.querySelector('a[href$="quien-soy"]').parentNode.classList.add("active");
 	} else if (window.pageYOffset >= offsetEquipo && window.pageYOffset < offsetTransporte) {
+		if(!previous) {
+			previous = 3;
+		} else if(previous == 3) {
+			return false;
+		}
+
 		deleteActiveClass();
 		document.querySelector('a[href$="equipo"]').parentNode.classList.add("active");
 	} else if (window.pageYOffset >= offsetTransporte) {
+		if(!previous) {
+			previous = 4;
+		} else if(previous == 4) {
+			return false;
+		}
+
 		deleteActiveClass();
 		document.querySelector('a[href$="transporte"]').parentNode.classList.add("active");
 	}
