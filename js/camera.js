@@ -1,4 +1,8 @@
 window.addEventListener("DOMContentLoaded", function(event) {
+	//initialiceCamera();
+});
+
+function initialiceCamera() {
 	var video = document.getElementById("video");
 	var videoObj = { "video": true };
 	var canvas = document.getElementById("canvas");
@@ -18,4 +22,4 @@ window.addEventListener("DOMContentLoaded", function(event) {
 	document.getElementById("snap").addEventListener("click", function(event) {
 		context.drawImage(video, 0, 0, 600, 400);
 	});
-});
+}
