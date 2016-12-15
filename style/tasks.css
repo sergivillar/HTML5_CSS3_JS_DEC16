@@ -20,19 +20,19 @@
 	background-color: rgba(255, 0, 0, 0.62);
 }
 
-#newTaskName {
+#newTaskName,
+.update-task-input {
 	border-radius: 0;
 	padding: 10px;
 	border: 1px solid #dcdcdc;
 	transition: border 0.3, box-shadow 0.3s;
 }
 
-#newTaskName:focus {
+#newTaskName:focus,
+.update-task-input:focus {
 	border: 1px solid #707070;
 	outline: none;
 	box-shadow: 0 0 5px 1px #969696;
-
-	animation: spin 2s linear infinite;
 }
 
 .loader {

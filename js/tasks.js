@@ -14,7 +14,7 @@ $(document).ready(function() {
 			var contentToAdd = '';
 
 			for (var i = 0; i < tasks.length; i++) {
-				contentToAdd += '<li class="task-item">' + tasks[i].name + '<button class="deleteTask" data-task-id="' + tasks[i].id + '">Eliminar</button></li>';
+				contentToAdd += '<li class="task-item"><input type="text" class="update-task-input" value="' + tasks[i].name + '" required><button class="deleteTask" data-task-id="' + tasks[i].id + '">Eliminar</button></li>';
 			}
 
 			tasksContainer.append(contentToAdd);
@@ -54,7 +54,7 @@ $(document).ready(function() {
 		} 
 
 		var complete = function(object, textStatus) {
-			loader.hide();
+			loader.fadeOut();
 			if (textStatus == 'error') {
 				console.log("Ha habido un error, revisalo.");
 			} else {
@@ -97,6 +97,30 @@ $(document).ready(function() {
 		});
 	}
 
+	var updateTask = function(id, name) {
+		var data = {
+			'name': name
+		}
+
+		$.ajax({
+			type: "PUT",
+			url: API_URL + "tasks/" + id,
+			data: data
+		})
+		.done(function(data){
+			for (var i = 0; i < tasks.length; i++){
+				if(tasks[i].id == id) {
+					tasks[i].name = name;
+				}
+			}
+
+			drawTasks();
+		})
+		.fail(function(error) {
+			console.error("Error actualizando tarea", error);
+		}) 
+	}
+
 
 	$('#sendNewTask').on("click", function(event){
 		if (newTaskInput.val() != '') {
@@ -110,7 +134,17 @@ $(document).ready(function() {
 		deleteTask(id);
 	});
 
+	$(document).on("blur", ".update-task-input", function(event){
+		var newName = $(this).val();
+		var id = $(this).siblings('.deleteTask').data("taskId");
+		updateTask(id, newName);
+	});
+
+	$(document).dblclick(function(event){
+		console.log("Has puslado la tecla " + event.which);
+	})
+
 	setTimeout(function() {
 		getTasks();
-	}, 1000);
+	}, 1);
 });
