@@ -9,12 +9,12 @@ $(document).ready(function() {
 		tasksContainer.empty();
 
 		if (tasks.length == 0) {
-			tasksContainer.append("<li>No tienes tareas pendientes</li>");
+			tasksContainer.append('<li class="task-item">No tienes tareas pendientes</li>');
 		} else {
 			var contentToAdd = '';
 
 			for (var i = 0; i < tasks.length; i++) {
-				contentToAdd += '<li>' + tasks[i].name + '</li>';
+				contentToAdd += '<li class="task-item">' + tasks[i].name + '<button class="deleteTask" data-task-id="' + tasks[i].id + '">Eliminar</button></li>';
 			}
 
 			tasksContainer.append(contentToAdd);
@@ -53,12 +53,33 @@ $(document).ready(function() {
 		});
 	}
 
+	var deleteTask = function(id) {
+		var success = function(data) {
+			tasks = $.grep(tasks, function(item){
+				return item.id != id;
+			});
+
+			drawTasks();
+		}
+
+		$.ajax({
+			type: "DELETE",
+			url: API_URL + "tasks/" + id,
+			success: success
+		});
+	}
+
 
 	$('#sendNewTask').on("click", function(event){
 		if (newTaskInput.val() != '') {
 			event.preventDefault();
 			createTask(newTaskInput.val());
 		}
+	});
+
+	$(document).on("click", ".deleteTask", function(event){
+		var id = $(this).data('taskId');
+		deleteTask(id);
 	});
 
 	getTasks();
